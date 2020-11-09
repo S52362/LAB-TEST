@@ -1,0 +1,50 @@
+EXERCISE 1
+
+number = 24
+def solution1():
+    bit_index = 0
+    count = 0
+    while (1 << bit_index) <= number:
+        if ((1 << bit_index) & number) != 0:
+            count = count + 1
+        return count
+
+def solution2():
+    x = bin(number)
+    return x[2:].count('1')
+print(solution1())
+print(solution2())
+
+EXERCISE 2
+
+string = "an apple is not a tomato"
+def solution1():
+    letter_dict = dict()
+    current_most_common_letter = string[0]
+    for letter in string:
+        if letter not in letter_dict:
+            letter_dict[letter] = 1
+        else:
+            letter_dict[letter] += 1
+        if letter_dict[letter] > letter_dict[current_most_common_letter]:
+            current_most_common_letter = letter
+    print(current_most_common_letter)
+    return current_most_common_letter
+
+print(solution1())
+
+EXERCISE 3
+
+string = "I have Python exam"
+def solution1():
+    return len(string.split(' '))
+print(solution1())
+
+EXERCISE 4
+
+a) def multiple (list):
+    multiple answer = 0:
+        for i in range (0, len(list))
+        return x * 2
+    x = argumented_multiply_by_two(10)
+
